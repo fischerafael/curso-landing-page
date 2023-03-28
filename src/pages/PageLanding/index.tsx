@@ -1,9 +1,18 @@
 import React from "react";
 import * as Chakra from "@chakra-ui/react";
+import { HeroSection } from "@/src/components/HeroSection";
 
 export const PageLanding = () => {
   return (
-    <Chakra.VStack w="full" minH="100vh" bg="gray.800" color="white">
+    <Chakra.VStack
+      w="full"
+      minH="100vh"
+      bg="gray.800"
+      color="white"
+      spacing="0"
+    >
+      {/* header */}
+
       <Chakra.HStack
         w="full"
         h="10vh"
@@ -36,6 +45,8 @@ export const PageLanding = () => {
           </Chakra.Button>
         </Chakra.HStack>
       </Chakra.HStack>
+
+      <HeroSection />
     </Chakra.VStack>
   );
 };

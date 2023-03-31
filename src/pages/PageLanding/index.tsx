@@ -1,51 +1,10 @@
 import React from "react";
 import * as Chakra from "@chakra-ui/react";
-import * as Icon from "react-icons/hi";
-import { HeroSection } from "@/src/components/HeroSection";
-import {
-  BenefitsSection,
-  BenefitsSectionProps,
-} from "@/src/components/BenefitsSection";
 
-const BENEFITS_SECTION: BenefitsSectionProps = {
-  items: [
-    {
-      id: "1",
-      title: "Aprenda React",
-      description: [
-        "Aprenda uma das tecnologias mais populares do mercado e consiga as melhores oportunidades de trabalho.",
-      ],
-      image: (
-        <Chakra.Icon fontSize="5xl" color="cyan.500" as={Icon.HiOutlineCode} />
-      ),
-    },
-    {
-      id: "2",
-      title: "Crie Aplicações",
-      description: [
-        "Desenvolva aplicações web modernas, escaláveis e performáticas, usando as melhores práticas do mercado.",
-      ],
-      image: (
-        <Chakra.Icon
-          fontSize="5xl"
-          color="cyan.500"
-          as={Icon.HiOutlineDeviceTablet}
-        />
-      ),
-    },
-    {
-      id: "3",
-      title: "Conquiste sua Vaga",
-      description: [
-        "Consiga sua tão desejada vaga de emprego naquela empresa que você tanto sonhou.",
-      ],
-      image: (
-        <Chakra.Icon fontSize="5xl" color="cyan.500" as={Icon.HiOutlineCash} />
-      ),
-    },
-  ],
-  title: "Benefícios",
-};
+import { HeroSection } from "@/src/components/HeroSection";
+import { BenefitsSection } from "@/src/components/BenefitsSection";
+import { FeaturesSection } from "@/src/components/FeaturesSection";
+import { BENEFITS_SECTION, FEATURES_SECTION } from "../data";
 
 export const PageLanding = () => {
   return (
@@ -96,6 +55,12 @@ export const PageLanding = () => {
       <BenefitsSection
         items={BENEFITS_SECTION.items}
         title={BENEFITS_SECTION.title}
+      />
+
+      <FeaturesSection
+        items={FEATURES_SECTION.items}
+        title={FEATURES_SECTION.title}
+        subTitle={FEATURES_SECTION.subTitle}
       />
     </Chakra.VStack>
   );

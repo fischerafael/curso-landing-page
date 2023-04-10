@@ -20,6 +20,13 @@ export const CardsSection = (props: CardsSectionProps) => {
         <Chakra.Text fontSize="4xl" fontWeight="bold" lineHeight="1.25">
           {props.title}
         </Chakra.Text>
+
+        {!!props.subTitle && (
+          <Chakra.Text fontSize="lg" maxW="500px">
+            {props.subTitle}
+          </Chakra.Text>
+        )}
+
         <Chakra.SimpleGrid w="full" h="full" columns={3} gap="8">
           {props.type === "benefit" &&
             props.items.map((item) => (

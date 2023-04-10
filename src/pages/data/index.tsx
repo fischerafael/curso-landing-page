@@ -1,4 +1,4 @@
-import { BenefitsSectionProps } from "@/src/components/BenefitsSection";
+import { CardsSectionProps } from "@/src/components/CardsSection";
 import { FeaturesSectionProps } from "@/src/components/FeaturesSection";
 import * as Chakra from "@chakra-ui/react";
 import * as Icon from "react-icons/hi";
@@ -29,7 +29,7 @@ export const FEATURES_SECTION: FeaturesSectionProps = {
   ],
 };
 
-export const BENEFITS_SECTION: BenefitsSectionProps = {
+export const BENEFITS_SECTION: CardsSectionProps = {
   items: [
     {
       id: "1",
@@ -67,4 +67,35 @@ export const BENEFITS_SECTION: BenefitsSectionProps = {
     },
   ],
   title: "Benefícios",
+};
+
+export const REVIEWS_SECTION: CardsSectionProps = {
+  items: [
+    {
+      id: "1",
+      title: "Ben",
+      description: [
+        "Super is one of the fastest ways to create a website. Being built on top of Notion reduces friction and allows you to update the content on your website effortlessly.",
+      ],
+      image: <Chakra.Avatar bg="cyan.700" size="md" color="white" name="Ben" />,
+    },
+    {
+      id: "2",
+      title: "Ben",
+      description: [
+        "Super is one of the fastest ways to create a website. Being built on top of Notion reduces friction and allows you to update the content on your website effortlessly.",
+      ],
+      image: <Chakra.Avatar bg="cyan.700" size="md" color="white" name="Ben" />,
+    },
+    {
+      id: "3",
+      title: "Ben",
+      description: [
+        "Super is one of the fastest ways to create a website. Being built on top of Notion reduces friction and allows you to update the content on your website effortlessly.",
+      ],
+      image: <Chakra.Avatar bg="cyan.700" size="md" color="white" name="Ben" />,
+    },
+  ],
+  title: "Reviews",
+  subTitle: "O que as pessoas estão falando sobre o curso",
 };

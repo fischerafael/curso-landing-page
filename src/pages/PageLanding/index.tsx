@@ -1,10 +1,9 @@
 import React from "react";
 import * as Chakra from "@chakra-ui/react";
-
 import { HeroSection } from "@/src/components/HeroSection";
-import { BenefitsSection } from "@/src/components/BenefitsSection";
 import { FeaturesSection } from "@/src/components/FeaturesSection";
-import { BENEFITS_SECTION, FEATURES_SECTION } from "../data";
+import { BENEFITS_SECTION, FEATURES_SECTION, REVIEWS_SECTION } from "../data";
+import { CardsSection } from "@/src/components/CardsSection";
 
 export const PageLanding = () => {
   return (
@@ -52,7 +51,8 @@ export const PageLanding = () => {
 
       <HeroSection />
 
-      <BenefitsSection
+      <CardsSection
+        type="benefit"
         items={BENEFITS_SECTION.items}
         title={BENEFITS_SECTION.title}
       />
@@ -61,6 +61,13 @@ export const PageLanding = () => {
         items={FEATURES_SECTION.items}
         title={FEATURES_SECTION.title}
         subTitle={FEATURES_SECTION.subTitle}
+      />
+
+      <CardsSection
+        type="review"
+        items={REVIEWS_SECTION.items}
+        title={REVIEWS_SECTION.title}
+        subTitle={REVIEWS_SECTION.subTitle}
       />
     </Chakra.VStack>
   );

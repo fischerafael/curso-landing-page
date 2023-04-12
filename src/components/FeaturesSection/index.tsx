@@ -13,7 +13,7 @@ export const FeaturesSection = (props: FeaturesSectionProps) => {
         h="full"
         maxW="1024px"
         px="4"
-        columns={2}
+        columns={[1, 1, 2]}
         gap="8"
       >
         <Chakra.VStack w="full" spacing="8" align="flex-start">

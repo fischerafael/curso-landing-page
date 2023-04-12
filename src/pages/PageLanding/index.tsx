@@ -9,6 +9,7 @@ import {
   REVIEWS_SECTION,
 } from "../data";
 import { CardsSection } from "@/src/components/CardsSection";
+import { Header } from "@/src/components/Header";
 
 export const PageLanding = () => {
   return (
@@ -19,40 +20,7 @@ export const PageLanding = () => {
       color="white"
       spacing="0"
     >
-      {/* header */}
-
-      <Chakra.HStack
-        w="full"
-        h="10vh"
-        borderBottom="solid 0.5px"
-        borderColor="gray.700"
-        justify="center"
-      >
-        <Chakra.HStack
-          w="full"
-          maxW="1024px"
-          px="4"
-          h="full"
-          justify="space-between"
-        >
-          <Chakra.Text fontSize="lg">
-            Curso
-            <Chakra.Text as="span" fontWeight="bold">
-              Landing
-            </Chakra.Text>
-            Page
-          </Chakra.Text>
-
-          <Chakra.Button
-            colorScheme="cyan"
-            variant="outline"
-            borderRadius="full"
-            _hover={{ color: "white", bg: "cyan.500", borderColor: "cyan.500" }}
-          >
-            Inscreva-se
-          </Chakra.Button>
-        </Chakra.HStack>
-      </Chakra.HStack>
+      <Header />
 
       <HeroSection />
 
@@ -76,6 +44,7 @@ export const PageLanding = () => {
       />
 
       <CardsSection
+        anchor="pricing"
         type="pricing"
         title={PRICING_SECTION.title}
         subTitle={PRICING_SECTION.subTitle}

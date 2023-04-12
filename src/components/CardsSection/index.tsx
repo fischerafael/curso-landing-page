@@ -4,30 +4,40 @@ import { CardContainer, CardType } from "../Card";
 
 export interface CardsSectionProps extends ISection {
   type?: CardType;
+  anchor?: string;
 }
 
 export const CardsSection = (props: CardsSectionProps) => {
   return (
-    <Chakra.VStack w="full" spacing="0" py="16">
+    <Chakra.VStack w="full" spacing="0" py="16" id={props.anchor}>
       <Chakra.VStack
         w="full"
         h="full"
         spacing="8"
         maxW="1024px"
         px="4"
-        align="flex-start"
+        align={["center", "center", "flex-start"]}
       >
-        <Chakra.Text fontSize="4xl" fontWeight="bold" lineHeight="1.25">
+        <Chakra.Text
+          fontSize="4xl"
+          fontWeight="bold"
+          lineHeight="1.25"
+          textAlign={["center", "center", "start"]}
+        >
           {props.title}
         </Chakra.Text>
 
         {!!props.subTitle && (
-          <Chakra.Text fontSize="lg" maxW="500px">
+          <Chakra.Text
+            fontSize="lg"
+            maxW="500px"
+            textAlign={["center", "center", "start"]}
+          >
             {props.subTitle}
           </Chakra.Text>
         )}
 
-        <Chakra.SimpleGrid w="full" h="full" columns={3} gap="8">
+        <Chakra.SimpleGrid w="full" h="full" columns={[1, 1, 2, 3]} gap="8">
           {props.type === "benefit" &&
             props.items.map((item) => (
               <CardContainer

@@ -49,6 +49,11 @@ export const CardsSection = (props: CardsSectionProps) => {
                 image={item.image}
               />
             ))}
+
+          {props.type === "pricing" &&
+            props.items.map((item) => (
+              <CardContainer key={item.id} type="pricing" {...item} />
+            ))}
         </Chakra.SimpleGrid>
       </Chakra.VStack>
     </Chakra.VStack>

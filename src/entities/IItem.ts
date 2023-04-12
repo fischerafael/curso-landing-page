@@ -3,4 +3,9 @@ export interface IItem {
   title?: string;
   image?: React.ReactNode;
   description?: string[];
+  price?: string;
+  subTitle?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  isPopular?: boolean;
 }

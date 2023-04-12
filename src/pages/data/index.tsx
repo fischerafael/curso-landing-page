@@ -1,5 +1,6 @@
 import { CardsSectionProps } from "@/src/components/CardsSection";
 import { FeaturesSectionProps } from "@/src/components/FeaturesSection";
+
 import * as Chakra from "@chakra-ui/react";
 import * as Icon from "react-icons/hi";
 
@@ -98,4 +99,42 @@ export const REVIEWS_SECTION: CardsSectionProps = {
   ],
   title: "Reviews",
   subTitle: "O que as pessoas estão falando sobre o curso",
+};
+
+export const PRICING_SECTION: CardsSectionProps = {
+  items: [
+    {
+      id: "1",
+      title: "Plano Inicial",
+      description: ["Curso Completo"],
+      image: <Chakra.Avatar bg="cyan.700" size="md" color="white" name="Ben" />,
+      price: "RS 10.00",
+      ctaHref: "www.google.com",
+      ctaLabel: "Comprar",
+      subTitle: "Pague apenas uma vez",
+    },
+    {
+      id: "2",
+      title: "Plano Médio",
+      description: ["Curso Completo", "Certificado"],
+      image: <Chakra.Avatar bg="cyan.700" size="md" color="white" name="Ben" />,
+      price: "RS 10.00",
+      ctaHref: "www.google.com",
+      ctaLabel: "Comprar",
+      subTitle: "Pague apenas uma vez",
+      isPopular: true,
+    },
+    {
+      id: "3",
+      title: "Plano Avançado",
+      description: ["Curso Completo", "Certificado", "Acesso Vitalício"],
+      image: <Chakra.Avatar bg="cyan.700" size="md" color="white" name="Ben" />,
+      price: "RS 10.00",
+      ctaHref: "www.google.com",
+      ctaLabel: "Comprar",
+      subTitle: "Pague apenas uma vez",
+    },
+  ],
+  title: "Preços",
+  subTitle: "Descubra o plano que melhor se adequa a sua necessidade.",
 };

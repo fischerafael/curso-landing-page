@@ -1,7 +1,7 @@
 import { IItem } from "./IItem";
 
-export interface ISection {
+export interface ISection<T = IItem> {
   title: string;
   subTitle?: string;
-  items: IItem[];
+  items: T[];
 }

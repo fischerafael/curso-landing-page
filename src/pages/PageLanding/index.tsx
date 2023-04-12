@@ -2,7 +2,12 @@ import React from "react";
 import * as Chakra from "@chakra-ui/react";
 import { HeroSection } from "@/src/components/HeroSection";
 import { FeaturesSection } from "@/src/components/FeaturesSection";
-import { BENEFITS_SECTION, FEATURES_SECTION, REVIEWS_SECTION } from "../data";
+import {
+  BENEFITS_SECTION,
+  FEATURES_SECTION,
+  PRICING_SECTION,
+  REVIEWS_SECTION,
+} from "../data";
 import { CardsSection } from "@/src/components/CardsSection";
 
 export const PageLanding = () => {
@@ -68,6 +73,13 @@ export const PageLanding = () => {
         items={REVIEWS_SECTION.items}
         title={REVIEWS_SECTION.title}
         subTitle={REVIEWS_SECTION.subTitle}
+      />
+
+      <CardsSection
+        type="pricing"
+        title={PRICING_SECTION.title}
+        subTitle={PRICING_SECTION.subTitle}
+        items={PRICING_SECTION.items}
       />
     </Chakra.VStack>
   );
